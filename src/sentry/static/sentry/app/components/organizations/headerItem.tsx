@@ -129,6 +129,7 @@ const Content = styled('div')`
 `;
 
 const IconContainer = styled('span', {shouldForwardProp: isPropValid})<ColorProps>`
+  display: flex;
   color: ${getColor};
   margin-right: ${space(1.5)};
 `;
