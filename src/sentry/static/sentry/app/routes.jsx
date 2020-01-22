@@ -1119,14 +1119,6 @@ function routes() {
         component={errorHandler(LazyLoad)}
       />
 
-      <Route
-        path="/organizations/:orgId/data-export/:dataId"
-        componentPromise={() =>
-          import(/* webpackChunkName: "DataDownloadView" */ 'app/views/dataExport/dataDownload')
-        }
-        component={errorHandler(LazyLoad)}
-      />
-
       <Route path="/onboarding/:orgId/" component={errorHandler(OrganizationContext)}>
         <IndexRedirect to="welcome/" />
         <Route
@@ -1216,6 +1208,15 @@ function routes() {
           path="/organizations/:orgId/user-feedback/"
           componentPromise={() =>
             import(/* webpackChunkName: "UserFeedback" */ 'app/views/userFeedback')
+          }
+          component={errorHandler(LazyLoad)}
+        />
+        <Route
+          path="/organizations/:orgId/data-export/:dataId"
+          componentPromise={() =>
+            import(
+              /* webpackChunkName: "DataDownloadView" */ 'app/views/dataExport/dataDownload'
+            )
           }
           component={errorHandler(LazyLoad)}
         />
