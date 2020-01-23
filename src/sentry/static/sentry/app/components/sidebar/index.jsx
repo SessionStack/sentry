@@ -24,6 +24,10 @@ import {IconTelescope} from 'app/icons/iconTelescope';
 import {IconSiren} from 'app/icons/iconSiren';
 import {IconReleases} from 'app/icons/iconReleases';
 import {IconSupport} from 'app/icons/iconSupport';
+import {IconGraph} from 'app/icons/iconGraph';
+import {IconLab} from 'app/icons/iconLab';
+import {IconStats} from 'app/icons/iconStats';
+import {IconSettings} from 'app/icons/iconSettings';
 import PreferencesStore from 'app/stores/preferencesStore';
 import SentryTypes from 'app/sentryTypes';
 import space from 'app/styles/space';
@@ -359,7 +363,7 @@ class Sidebar extends React.Component {
                       {...sidebarItemProps}
                       index
                       onClick={this.hidePanel}
-                      icon={<InlineSvg src="icon-health" />}
+                      icon={<IconGraph size="md" />}
                       label={t('Dashboards')}
                       to={`/organizations/${organization.slug}/dashboards/`}
                       id="customizable-dashboards"
@@ -388,7 +392,7 @@ class Sidebar extends React.Component {
                           evt
                         )
                       }
-                      icon={<InlineSvg src="icon-labs" />}
+                      icon={<IconLab size="md" />}
                       label={t('Monitors')}
                       to={`/organizations/${organization.slug}/monitors/`}
                       id="monitors"
@@ -423,7 +427,7 @@ class Sidebar extends React.Component {
                   <SidebarItem
                     {...sidebarItemProps}
                     onClick={this.hidePanel}
-                    icon={<InlineSvg src="icon-stats" />}
+                    icon={<IconStats size="md" />}
                     label={t('Stats')}
                     to={`/organizations/${organization.slug}/stats/`}
                     id="stats"
@@ -434,7 +438,7 @@ class Sidebar extends React.Component {
                   <SidebarItem
                     {...sidebarItemProps}
                     onClick={this.hidePanel}
-                    icon={<InlineSvg src="icon-settings" />}
+                    icon={<IconSettings size="md" />}
                     label={t('Settings')}
                     to={`/settings/${organization.slug}/`}
                     id="settings"
