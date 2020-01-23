@@ -18,6 +18,12 @@ import HookStore from 'app/stores/hookStore';
 import InlineSvg from 'app/components/inlineSvg';
 import {IconActivity} from 'app/icons/iconActivity';
 import {IconDashboard} from 'app/icons/iconDashboard';
+import {IconIssues} from 'app/icons/iconIssues';
+import {IconStack} from 'app/icons/iconStack';
+import {IconTelescope} from 'app/icons/iconTelescope';
+import {IconSiren} from 'app/icons/iconSiren';
+import {IconReleases} from 'app/icons/iconReleases';
+import {IconSupport} from 'app/icons/iconSupport';
 import PreferencesStore from 'app/stores/preferencesStore';
 import SentryTypes from 'app/sentryTypes';
 import space from 'app/styles/space';
@@ -249,7 +255,7 @@ class Sidebar extends React.Component {
                     {...sidebarItemProps}
                     index
                     onClick={this.hidePanel}
-                    icon={<IconDashboard />}
+                    icon={<IconDashboard size="md" />}
                     label={t('Projects')}
                     to={`/organizations/${organization.slug}/projects/`}
                   />
@@ -261,7 +267,7 @@ class Sidebar extends React.Component {
                         evt
                       )
                     }
-                    icon={<InlineSvg src="icon-issues" />}
+                    icon={<IconIssues size="md" />}
                     label={t('Issues')}
                     to={`/organizations/${organization.slug}/issues/`}
                     id="issues"
@@ -280,7 +286,7 @@ class Sidebar extends React.Component {
                           evt
                         )
                       }
-                      icon={<InlineSvg src="icon-stack" />}
+                      icon={<IconStack size="md" />}
                       label={t('Events')}
                       to={`/organizations/${organization.slug}/events/`}
                       id="events"
@@ -296,7 +302,7 @@ class Sidebar extends React.Component {
                           evt
                         )
                       }
-                      icon={<InlineSvg src="icon-telescope" />}
+                      icon={<IconTelescope size="md" />}
                       label={t('Discover v2')}
                       to={generateDiscoverLandingPageRoute(organization.slug)}
                       id="discover-v2"
@@ -312,7 +318,7 @@ class Sidebar extends React.Component {
                           evt
                         )
                       }
-                      icon={<InlineSvg src="icon-siren" size="22" />}
+                      icon={<IconSiren size="md" />}
                       label={t('Incidents')}
                       to={`/organizations/${organization.slug}/incidents/`}
                       id="incidents"
@@ -327,7 +333,7 @@ class Sidebar extends React.Component {
                         evt
                       )
                     }
-                    icon={<InlineSvg src="icon-releases" />}
+                    icon={<IconReleases size="md" />}
                     label={t('Releases')}
                     to={`/organizations/${organization.slug}/releases/`}
                     id="releases"
@@ -340,7 +346,7 @@ class Sidebar extends React.Component {
                         evt
                       )
                     }
-                    icon={<InlineSvg src="icon-support" size="22" />}
+                    icon={<IconSupport size="md" />}
                     label={t('User Feedback')}
                     to={`/organizations/${organization.slug}/user-feedback/`}
                     id="user-feedback"
@@ -409,7 +415,7 @@ class Sidebar extends React.Component {
                   <SidebarItem
                     {...sidebarItemProps}
                     onClick={this.hidePanel}
-                    icon={<IconActivity />}
+                    icon={<IconActivity size="md" />}
                     label={t('Activity')}
                     to={`/organizations/${organization.slug}/activity/`}
                     id="activity"
