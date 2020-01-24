@@ -7,7 +7,8 @@ import {PageContent} from 'app/styles/organization';
 import {t} from 'app/locale';
 import EventView from 'app/views/eventsV2/eventView';
 import Feature from 'app/components/acl/feature';
-import InlineSvg from 'app/components/inlineSvg';
+import {IconEdit} from 'app/icons/iconEdit';
+import {IconTelescope} from 'app/icons/iconTelescope';
 import Link from 'app/components/links/link';
 import NavTabs from 'app/components/navTabs';
 import Placeholder from 'app/components/placeholder';
@@ -118,7 +119,7 @@ export default class DetailsBody extends React.Component<Props> {
                           ((initiallyLoaded && projects) as Project[]) || []
                         )}
                       >
-                        <DiscoverIcon src="icon-telescope" />
+                        <StyledIconTelescope />
                         {t('View in Discover')}
                       </DiscoverLink>
                     )}
@@ -129,7 +130,7 @@ export default class DetailsBody extends React.Component<Props> {
               <Query>user.username:"Jane Doe" server:web-8 example error</Query>
 
               <EditRuleLink to="#">
-                <InlineSvg src="icon-edit" size="14px" />
+                <IconEdit />
                 {t('Edit alert rule')}
               </EditRuleLink>
             </PageContent>
@@ -181,7 +182,7 @@ const DiscoverLink = styled(Link)`
   text-transform: none;
 `;
 
-const DiscoverIcon = styled(InlineSvg)`
+const StyledIconTelescope = styled(IconTelescope)`
   margin-right: ${space(0.5)};
 `;
 

@@ -10,7 +10,7 @@ import space from 'app/styles/space';
 import {Organization, SavedQuery} from 'app/types';
 import {trackAnalyticsEvent} from 'app/utils/analytics';
 import {Client} from 'app/api';
-import InlineSvg from 'app/components/inlineSvg';
+import {IconEllipsis} from 'app/icons/iconEllipsis';
 import DropdownMenu from 'app/components/dropdownMenu';
 import MenuItem from 'app/components/menuItem';
 import Pagination from 'app/components/pagination';
@@ -296,7 +296,7 @@ class ContextMenu extends React.Component {
                   },
                 }) as any)}
               >
-                <InlineSvg src="icon-ellipsis-filled" />
+                <IconEllipsis />
               </ContextMenuButton>
 
               {isOpen && (
@@ -318,8 +318,8 @@ class ContextMenu extends React.Component {
 const ContextMenuButton = styled('div')`
   border-radius: 3px;
   background-color: ${p => p.theme.offWhite};
-  padding-left: 8px;
-  padding-right: 8px;
+  display: flex;
+  padding: ${space(0.5)} ${space(1)};
 
   &:hover {
     background-color: ${p => p.theme.offWhite2};
